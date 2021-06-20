@@ -1,0 +1,32 @@
+name: Week 4
+on:
+  push:
+    branches:
+      - week4
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Node Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Get Count
+        id: vars
+        run: echo ::set-output name=count::$(cat ./.bit/.progress)
+
+      - name: Step 1
+        uses: cypress-io/github-action@v2
+        with:
+          spec: cypress/integration/test.baseelements.js
+      
+      - name: Step 2
+        uses: cypress-io/github-action@v2
+        with:
+          spec: cypress/integration/test.form.js
