@@ -1,0 +1,322 @@
+title: Sample Learning Lab
+description: >-
+    Course description: Place your course description here...
+template:
+    name: learninglab-template
+    repo: your-learninglab-template
+before:
+    - type: createIssue
+      title: Getting Started with Serverless
+      body: 1.1-Week 1 Step 1.md
+steps:
+    - title: 'Week 1: GitHub'
+      description: '✅  Task:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: 1.2-Week 1 Step 2.md
+          files: ['blog.md']
+          scripts: n/a
+    - title: 'Week 1: Say Hello to VSCode'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 1.3-Week 1 Step 3.md
+          files: ['n/a']
+          scripts: test.1.2.js
+    - title: 'Week 1: Getting Cat Pics with Postman 🐱'
+      description: '✅  Task:'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 1.4-Week 1 Step 4.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 1: Week 1 Step 4'
+      description: 'Building our first function ⚡[HackerVoice]'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 1.5-Week 1 Step 5.md
+          files: ['n/a']
+          scripts: test.1.4.js
+    - title: 'Week 1: Let me in!'
+      description: '✅ Tasks:'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 1.6-Week 1 Step 6.md
+          files: ['n/a']
+          scripts: test.1.5.js
+    - title: 'Week 1: Trying to make node-fetch happen'
+      description: '✅ Tasks:'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 1.7-Week 1 Step 7.md
+          files: ['n/a']
+          scripts: test.1.6.js
+    - title: 'Week 1: Name your Cat'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 1.8-Week 1 Step 8.md
+          files: ['n/a']
+          scripts: test.1.7.js
+    - title: 'Week 1: [TOP SECRET] Morse Code Converter'
+      description: '✅  Tasks:'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 1.9-Week 1 Step 9.md
+          files: ['n/a']
+          scripts: test.1.8.js
+    - title: 'Week 1: Week 1 Step 9'
+      description: '📝 Week 1 Livestream Feedback'
+      event: issue_comment.created
+      stepType: feedback
+      actions:
+        - type: respond
+          with: feedback.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 1: Feedback'
+      description: Provide your feedback for Week 1!
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 1-complete.md
+        - type: createIssue
+          title: Week 2
+          body: 2.1-Week 2 Step 1.md
+        - type: closeIssue
+    - title: 'Week 2: Getting Emotional ~ With the Face API '
+      description: '✅ Task:'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 2.2-Week 2 Step 2.md
+          files: ['n/a']
+          scripts: test.parseimage.js
+    - title: 'Week 2: Week 2 Step 2'
+      description: 'Checkpoint #1'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 2.3-Week 2 Step 3.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 2: Week 2 Step 3'
+      description: '📝 Task 3: Create a Face [API Endpoint](https://smartbear.com/learn/performance-monitoring/api-endpoints/#:~:text=For%20APIs%2C%20an%20endpoint%20can,to%20carry%20out%20their%20function.&text=The%20place%20that%20APIs%20send,lives%2C%20is%20called%20an%20endpoint.)'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 2.4-Week 2 Step 4.md
+          files: ['n/a']
+          scripts: test.secrets2.js
+    - title: 'Week 2: Week 2 Step 4'
+      description: 'Call the Face API P1: Setting [Params](https://idratherbewriting.com/learnapidoc/docapis_doc_parameters.html)'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: 2.5-Week 2 Step 5.md
+          files: ['index.js']
+          scripts: n/a
+    - title: 'Week 2: Week 2 Step 5'
+      description: 'Call the Face API P2: Using Fetch'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 2.6-Week 2 Step 6.md
+          files: ['n/a']
+          scripts: test.emotiondata.js
+    - title: 'Week 2: Week 2 Step 6'
+      description: 'Checkpoint 2'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 2.7-Week 2 Step 7.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 2: Week 2 Step 7'
+      description: 'Setting up the Twilio API'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 2.8-Week 2 Step 8.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 2: Week 2 Step 8'
+      description: 'Connecting Locally to the Twillio API'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: 2.9-Week 2 Step 9.md
+          files: ['node-modules.json']
+          scripts: n/a
+    - title: 'Week 2: Week 2 Step 9'
+      description: 'Calling the Twillio API'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: 2.a10-Week 2 Step 10.md
+          files: ['index.js']
+          scripts: n/a
+    - title: 'Week 2: Week 2 Step 10'
+      description: '📝 Week 2 Livestream Feedback'
+      event: issue_comment.created
+      stepType: feedback
+      actions:
+        - type: respond
+          with: feedback.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 2: Feedback'
+      description: Provide your feedback for Week 2!
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 2-complete.md
+        - type: createIssue
+          title: Week 3
+          body: 3.1-Week 3 Step 1.md
+        - type: closeIssue
+    - title: 'Week 3: Week 3 Step 1'
+      description: 'Learning Objectives'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 3.2-Week 3 Step 2.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 3: Week 3 Step 2'
+      description: 'Calling the Giphy API'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: 3.3-Week 3 Step 3.md
+          files: ['index.js']
+          scripts: n/a
+    - title: 'Week 3: Week 3 Step 3'
+      description: 'Sending the GIF'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: 3.4-Week 3 Step 4.md
+          files: ['index.js']
+          scripts: n/a
+    - title: 'Week 3: Week 3 Step 4'
+      description: 'Learning Objectives'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 3.5-Week 3 Step 5.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 3: Week 3 Step 5'
+      description: 'Setting Up Configuration'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 3.6-Week 3 Step 6.md
+          files: ['js/databaseContext.js']
+          scripts: test.databaseContext.js
+    - title: 'Week 3: Week 3 Step 6'
+      description: 'Modifying your Azure Function'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 3.7-Week 3 Step 7.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 3: Week 3 Step 7'
+      description: '📝 Week 3 Livestream Feedback'
+      event: issue_comment.created
+      stepType: feedback
+      actions:
+        - type: respond
+          with: feedback.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 3: Feedback'
+      description: Provide your feedback for Week 3!
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 3-complete.md
+        - type: createIssue
+          title: Week 4
+          body: 4.1-Week 4 Step 1.md
+        - type: closeIssue
+    - title: 'Week 4: Week 4 Step 1'
+      description: 'Submitting Final Project Proposals'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 4.2-Week 4 Step 2.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 4: Week 4 Step 2'
+      description: 'Submitting an MVP'
+      event: 
+      stepType: 
+      actions:
+        - type: respond
+          with: 4.3-Week 4 Step 3.md
+          files: ['']
+          scripts: 
+    - title: 'Week 4: Week 4 Step 3'
+      description: 'Submitting the Final Project'
+      event: 
+      stepType: 
+      actions:
+        - type: respond
+          with: 4.4-Week 4 Step 4.md
+          files: ['']
+          scripts: 
+    - title: 'Week 4: Week 4 Step 4'
+      description: 'The Lightning Talk'
+      event: 
+      stepType: 
+      actions:
+        - type: respond
+          with: feedback.md
+          files: ['']
+          scripts: 
+    - title: 'Week 4: Feedback'
+      description: Provide your feedback for Week 4!
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 4-complete.md
+        - type: closeIssue
